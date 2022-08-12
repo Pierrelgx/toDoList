@@ -1,6 +1,6 @@
 import React from 'react';
-import { Todo } from 'components/Todo';
 import styled from "styled-components";
+import { Todolist } from 'components/TodoList';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ const AppWrapper = styled.div`
 function App() {
   return (
     <AppWrapper>
-      <Todo />
+      <Todolist />
     </AppWrapper>
   );
 }

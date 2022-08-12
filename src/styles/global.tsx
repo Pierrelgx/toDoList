@@ -39,6 +39,5 @@ export const GlobalStyle = createGlobalStyle`
     cursor:pointer;
   }
   
-  html,
-  body,
+ 
 `;
