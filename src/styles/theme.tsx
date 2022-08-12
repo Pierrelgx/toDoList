@@ -1,7 +1,11 @@
 import type { DefaultTheme } from "styled-components";
 
 const colors = {
-  mexicanRed: "#A4262A",
+  cultured: "#F7F7F7",
+  darkCharcoal: "#323232",
+  eerieBlack: "#16181D",
+  royalBlue: "#3466e4",
+  spanishGray: "#949494",
 };
 
 const fontWeights = {
