@@ -1,15 +1,22 @@
-import { TodoTitle, TodoWrapper, TodoText, ArrowRight, Background } from "./Todo.styles";
+import { useCallback } from "react";
+import { ArrowRight, TodoWrapper, TodoInnerWrapper, TodoTitleWrapper, TodoTitle, TodoDescription  } from "./Todo.styles";
 
 export const Todo = (): JSX.Element => {
+
+  const handleOnClick = useCallback(() => {
+    console.log("clicked todo")
+  }, []);
+
   return (
-    <>
-    <Background> 
-    <TodoWrapper><input type="checkbox" id="scales" name="scales"></input></TodoWrapper>
-    <TodoTitle>Coucou test Piou Piou</TodoTitle>
-    <TodoText>Ceci est l'aperçu du message...</TodoText>
-    <ArrowRight>＞</ArrowRight>
-    </Background>
-    </>
+    <TodoWrapper onClick={handleOnClick}>
+      <TodoInnerWrapper>
+        <input type="checkbox" id="scales" name="scales" />
+        <TodoTitleWrapper>
+          <TodoTitle>Title</TodoTitle>
+          <TodoDescription>Description ici...</TodoDescription>
+        </TodoTitleWrapper>
+      </TodoInnerWrapper>
+      <ArrowRight />
+    </TodoWrapper>
   )
 };
-
