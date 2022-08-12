@@ -10,6 +10,10 @@ export const Background = styled.div`
 export const TodoWrapper = styled.div`
   display: flex;
   margin-top: 25px;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const TodoTitle = styled.h1`
@@ -38,5 +42,4 @@ export const ArrowRight = styled.div`
   font-size: 12px;
   margin-left: 270px;
   margin-top: -22px;
-  
 `;

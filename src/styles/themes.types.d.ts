@@ -1,7 +1,11 @@
 import "styled-components";
 
 interface Colors {
-  mexicanRed: string;
+  cultured: string;
+  darkCharcoal: string;
+  eerieBlack: string;
+  royalBlue: string;
+  spanishGray: string;
 }
 
 interface FontWeights {

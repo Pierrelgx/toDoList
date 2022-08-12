@@ -7,6 +7,7 @@ const AppWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: ${(props) => props.theme.colors.darkCharcoal};
 `;
 
 function App() {
