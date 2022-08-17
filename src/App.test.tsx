@@ -1,9 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { ThemeProvider } from "styled-components";
+import { theme } from "./styles";
 
 test('renders title', () => {
-  render(<App />);
-  const titleElement = screen.getByText(/Coucou test Piou Piou/i);
+  render((
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  ));
+  const titleElement = screen.getByText(/titre one lol/i);
   expect(titleElement).toBeInTheDocument();
 });

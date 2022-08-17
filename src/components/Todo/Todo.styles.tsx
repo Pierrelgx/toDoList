@@ -37,6 +37,7 @@ export const TodoTitle = styled.h3`
   color: ${(props) => props.theme.colors.cultured};
   font-weight: ${(props) => props.theme.fontWeights.bold};
   font-size: ${(props) => props.theme.fontSizes.size16};
+  /* text-transform: capitalize; */
 `;
 
 export const TodoDescription = styled.p`

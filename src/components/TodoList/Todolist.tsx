@@ -1,35 +1,46 @@
 import { Todo } from "components/Todo";
 import { useMemo } from "react";
-import { TodolistWrapper } from "./Todolist.styles";
+import { TodoListWrapper } from "./Todolist.styles";
 import type { Item } from "components/Todo"
 
-export const Todolist = (): JSX.Element => {
+
+export const TodoList = (): JSX.Element => {
 
 
   const todoItems: Item[] = useMemo(() => [
     {
       id: 1,
-      name: "one"
+      name: "titre one lol",
+      description: "description one"
     },
     {
       id: 2,
-      name: "two"
+      name: "",
+      description: "description two"
     },
     {
       id: 3,
-      name: "three"
+      name: "three",
+      description: "description three"
     },
     {
       id: 4,
-      name: "four"
+      name: "four",
+      description: "description four"
     }
+    
   ], []);
 
   return (
-    <TodolistWrapper>
+    <TodoListWrapper>
       {todoItems.map((item) => (
         <Todo key={item.id} item={item} />
       ))}
-    </TodolistWrapper>
+    </TodoListWrapper>
   )
+
+
+  
+
+
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import { Todolist } from 'components/TodoList';
+// import { TodoList } from 'components/TodoList';
+import { TodoDetails } from 'components/TodoDetails';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -13,7 +14,9 @@ const AppWrapper = styled.div`
 function App() {
   return (
     <AppWrapper>
-      <Todolist />
+      {/* <TodoList /> */}
+      <TodoDetails/>
+      {/* <TodoDetails data={{ id: 1, name: "test", description: "test2"}} /> */}
     </AppWrapper>
   );
 }

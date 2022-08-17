@@ -3,7 +3,8 @@ import { ArrowRight, TodoWrapper, TodoInnerWrapper, TodoTitleWrapper, TodoTitle,
 
 export interface Item {
   id: number;
-  name: string
+  name: string;
+  description: string
 }
 
 interface TodoProps {
@@ -14,6 +15,8 @@ export const Todo = ({
   item
 }: TodoProps): JSX.Element => {
 
+  const { name, description } = item;
+
   const handleOnClick = useCallback(() => {
     console.log("clicked todo")
   }, []);
@@ -23,8 +26,8 @@ export const Todo = ({
       <TodoInnerWrapper>
         <input type="checkbox" id="scales" name="scales" />
         <TodoTitleWrapper>
-          <TodoTitle>{item.name}</TodoTitle>
-          <TodoDescription>Description ici...</TodoDescription>
+          <TodoTitle>{!!name.length ? name[0]?.toUpperCase() + name.substring(1) : "No title"}</TodoTitle>
+          <TodoDescription>{description || "N/A"}</TodoDescription>
         </TodoTitleWrapper>
       </TodoInnerWrapper>
       <ArrowRight />
