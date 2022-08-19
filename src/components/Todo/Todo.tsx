@@ -11,9 +11,7 @@ interface TodoProps {
   item: Item
 }
 
-export const Todo = ({
-  item
-}: TodoProps): JSX.Element => {
+export const Todo = ({item }: TodoProps): JSX.Element => {
 
   const { name, description } = item;
 

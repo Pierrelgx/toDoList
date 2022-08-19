@@ -1,7 +1,8 @@
+import { TodoUpsert } from 'components/TodoUpsert';
 import React from 'react';
 import styled from "styled-components";
 // import { TodoList } from 'components/TodoList';
-import { TodoDetails } from 'components/TodoDetails';
+// import { TodoDetails } from 'components/TodoDetails';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -15,8 +16,9 @@ function App() {
   return (
     <AppWrapper>
       {/* <TodoList /> */}
-      <TodoDetails/>
+      {/* <TodoDetails /> */}
       {/* <TodoDetails data={{ id: 1, name: "test", description: "test2"}} /> */}
+      <TodoUpsert />
     </AppWrapper>
   );
 }

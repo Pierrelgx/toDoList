@@ -1,4 +1,4 @@
-
+import { TodoEditWrapper } from "./TodoUpsert.styles"
 /**
  * 1. Create edit page with an accessible form (with the correct semantic elements)
  * 2. Create form validation (KISS - Keep it simple stupid)
@@ -7,6 +7,14 @@
 export const TodoUpsert = (): JSX.Element => {
   return (
     <>
+      <TodoEditWrapper>
+        <form>
+          <label>Name</label><br />
+          <input type="text" placeholder="Title de la tâche" required />
+          <label>Details</label>
+          <input type="text" placeholder="Description de la tâche" required />
+        </form>
+      </TodoEditWrapper>
     </>
   )
 }
