@@ -1,6 +1,7 @@
 // import { Todo } from "components/Todo";
 // import { TodoDescription } from "components/Todo/Todo.styles";
-import { TodoDetailsWrapper, TodoDetailsColumn, TodoDescription, TodoTask, TodoTitle } from "components/TodoDetails/TodoDetails.styles";
+import { TodoDetailsRow, TodoDescription, TodoTask, TodoTitle } from "components/TodoDetails/TodoDetails.styles";
+import { Container } from "components/Container";
 
 
 
@@ -12,18 +13,26 @@ import { TodoDetailsWrapper, TodoDetailsColumn, TodoDescription, TodoTask, TodoT
  */
 
 export const TodoDetails = (): JSX.Element => {
+
+  const title = "Task title";
+  const description = "Description of the todo task";
     
   return (
     <>
       {/* Here we put the details page with the todo details */}
-      <TodoDetailsWrapper>
-      <TodoTitle>test</TodoTitle>
+      <Container>
+        <TodoTitle>test</TodoTitle>
         
-        <TodoDetailsColumn>
+        <TodoDetailsRow>
           <TodoTask>Tâches</TodoTask>
-          <TodoDescription>TitleDescription</TodoDescription>
-        </TodoDetailsColumn>
-      </TodoDetailsWrapper>
+          <TodoDescription>{title}</TodoDescription>
+        </TodoDetailsRow>
+        
+        <TodoDetailsRow>
+          <TodoTask>Description</TodoTask>
+          <TodoDescription>{description}</TodoDescription>
+        </TodoDetailsRow>
+      </Container>
     </>
   )
 }
