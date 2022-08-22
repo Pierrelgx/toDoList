@@ -8,7 +8,6 @@ export const Container = styled.div`
   padding: 0 16px;
   height: 100%;
   width: 100%;
-  background-color: #16181d ;
 
   /* Desktop */
   @media (min-width: 768px) {

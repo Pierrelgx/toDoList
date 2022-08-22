@@ -1,21 +1,24 @@
 import styled from "styled-components";
 
-export const WrapTitle = styled.div`
+
+export const TodoUpsertLabel = styled.label`
     display: flex;
     flex-direction: column;
-    margin-bottom: 8px;
-    color: ${(props) => props.theme.colors.cultured};
-
-`;
-
-export const WrapInput = styled.div`
-    display: flex;
-    flex-direction: column;
-    background-color: #5a5a5a;
-    margin-bottom: 16px;
-    color: ${(props) => props.theme.colors.cultured};
-    padding: 8px 16px;
-    border-radius: 6px;
     width: 100%;
+    color: ${(props) => props.theme.colors.cultured};
+    gap: 6px;
+
 `;
 
+export const Input = styled.input`
+    background-color: ${(props) => props.theme.colors.spanishGray20};
+    color: ${(props) => props.theme.colors.cultured};
+    border-radius: 4px;
+    padding: 6px;
+`;
+
+export const TodoForm = styled.form`
+	display: flex;
+  flex-direction: column;
+	gap: 16px;
+`;

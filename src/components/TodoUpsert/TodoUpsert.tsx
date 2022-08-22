@@ -1,5 +1,5 @@
 import { Container } from "components/Container";
-import { WrapTitle, WrapInput } from "./TodoUpsert.styles";
+import { Input, TodoUpsertLabel, TodoForm } from "./TodoUpsert.styles";
 
 /**
  * 1. Create edit page with an accessible form (with the correct semantic elements)
@@ -10,34 +10,25 @@ export const TodoUpsert = (): JSX.Element => {
   return (
     <>
       <Container>
+        <TodoForm>
+        
+          <TodoUpsertLabel>
+            Name
+            <Input type="text" placeholder="blabla" required />
+          </TodoUpsertLabel>
 
-        <form>
-          <WrapTitle>
-            <label>Name <br /></label> 
-          </WrapTitle>
+          <TodoUpsertLabel>
+            Details
+            <Input type="text" placeholder="Description" required />
+          </TodoUpsertLabel>
 
-          <WrapInput>
-            <input type="text" placeholder="Title de la tâche" required />
-          </WrapInput>
-          
-          <WrapTitle>
-            <label>Details <br /></label>
-          </WrapTitle>
+          <TodoUpsertLabel>
+            Date
+            <Input type="date" placeholder="Description" required />
+          </TodoUpsertLabel>
 
-          <WrapInput>
-            <input type="text" placeholder="Description de la tâche" required />
-          </WrapInput>
-
-          <WrapTitle>
-            <label>Quand <br /></label>
-          </WrapTitle>
-
-          <WrapInput>
-            <input type="date" required />
-          </WrapInput>
-
-
-        </form>
+        
+        </TodoForm>
       </Container>
     </>
   )

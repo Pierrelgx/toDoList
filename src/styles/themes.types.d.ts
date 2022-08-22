@@ -7,6 +7,7 @@ interface Colors {
   eerieBlack: string;
   royalBlue: string;
   spanishGray: string;
+  spanishGray20: string;
 }
 
 interface FontWeights {
