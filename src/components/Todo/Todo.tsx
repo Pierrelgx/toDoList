@@ -1,9 +1,7 @@
-import { useCallback } from "react";
 import { ArrowRight, TodoWrapper, TodoInnerWrapper, TodoTitleWrapper, TodoTitle, TodoDescription  } from "./Todo.styles";
 
-
 export interface Item {
-  id: number;
+  id: string;
   name: string;
   description: string
 }
@@ -14,14 +12,10 @@ interface TodoProps {
 
 export const Todo = ({item }: TodoProps): JSX.Element => {
 
-  const { name, description } = item;
-
-  const handleOnClick = useCallback(() => {
-    console.log("clicked todo")
-  }, []);
+  const { name, description, id } = item;
 
   return (
-    <TodoWrapper onClick={handleOnClick}>
+    <TodoWrapper to={`details/${id}`}>
       <TodoInnerWrapper>
         <input type="checkbox" id="scales" name="scales" />
         <TodoTitleWrapper>

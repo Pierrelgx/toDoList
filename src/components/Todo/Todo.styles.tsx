@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { ReactComponent as ArrowRightRaw } from "assets/icons/arrow-right.svg"
+import { Link } from "react-router-dom";
 
-export const TodoWrapper = styled.button`
+export const TodoWrapper = styled(Link)`
   display: flex;
   gap: 16px;
   min-width: 600px;
@@ -12,6 +13,7 @@ export const TodoWrapper = styled.button`
   background-color: ${(props) => props.theme.colors.darkCharcoal};
   padding: 16px;
   border-radius: 10px;
+  text-decoration: none;
   
   &:hover {
     background-color: ${(props) => props.theme.colors.darkLiver};
