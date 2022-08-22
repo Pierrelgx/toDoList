@@ -14,17 +14,17 @@ export const TodoUpsert = (): JSX.Element => {
         
           <TodoUpsertLabel>
             Name
-            <Input type="text" placeholder="blabla" required />
+            <Input type="text"  required />
           </TodoUpsertLabel>
 
           <TodoUpsertLabel>
             Details
-            <Input type="text" placeholder="Description" required />
+            <Input type="text"  required />
           </TodoUpsertLabel>
 
           <TodoUpsertLabel>
-            Date
-            <Input type="date" placeholder="Description" required />
+            Quand
+            <Input type="date" required />
           </TodoUpsertLabel>
 
         
