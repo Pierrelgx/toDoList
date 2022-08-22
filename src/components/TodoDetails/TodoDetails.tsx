@@ -4,6 +4,7 @@ import { TodoDetailsRow, TodoDescription, TodoTask, TodoTitle } from "components
 import { Container } from "components/Container";
 import mockData from "mock/mockData.json";
 import { useParams } from "react-router-dom";
+import { createTitle } from "helpers/string";
 
 
 
@@ -23,11 +24,11 @@ export const TodoDetails = (): JSX.Element => {
     <>
       {/* Here we put the details page with the todo details */}
       <Container>
-        <TodoTitle>{details.name}</TodoTitle>
+        <TodoTitle>{createTitle(details.name)}</TodoTitle>
         
         <TodoDetailsRow>
           <TodoTask>Tâches</TodoTask>
-          <TodoDescription>{details.name}</TodoDescription>
+          <TodoDescription>{createTitle(details.name)}</TodoDescription>
         </TodoDetailsRow>
         
         <TodoDetailsRow>

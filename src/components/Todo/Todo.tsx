@@ -1,3 +1,4 @@
+import { createTitle } from "helpers/string";
 import { ArrowRight, TodoWrapper, TodoInnerWrapper, TodoTitleWrapper, TodoTitle, TodoDescription  } from "./Todo.styles";
 
 export interface Item {
@@ -19,7 +20,7 @@ export const Todo = ({item }: TodoProps): JSX.Element => {
       <TodoInnerWrapper>
         <input type="checkbox" id="scales" name="scales" />
         <TodoTitleWrapper>
-          <TodoTitle>{!!name.length ? name[0]?.toUpperCase() + name.substring(1) : "No title"}</TodoTitle>
+          <TodoTitle>{createTitle(name)}</TodoTitle>
           <TodoDescription>{description || "N/A"}</TodoDescription>
         </TodoTitleWrapper>
       </TodoInnerWrapper>
