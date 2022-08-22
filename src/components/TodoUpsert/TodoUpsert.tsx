@@ -7,28 +7,26 @@ import { Input, TodoUpsertLabel, TodoForm } from "./TodoUpsert.styles";
  */
 export const TodoUpsert = (): JSX.Element => {
   return (
-    <>
-      <Container>
-        <TodoForm>
-        
-          <TodoUpsertLabel>
-            Name
-            <Input type="text"  required />
-          </TodoUpsertLabel>
+    <Container>
+      <TodoForm>
+      
+        <TodoUpsertLabel>
+          Name
+          <Input type="text"  required />
+        </TodoUpsertLabel>
 
-          <TodoUpsertLabel>
-            Details
-            <Input type="text"  required />
-          </TodoUpsertLabel>
+        <TodoUpsertLabel>
+          Details
+          <Input type="text"  required />
+        </TodoUpsertLabel>
 
-          <TodoUpsertLabel>
-            Quand
-            <Input type="date" required />
-          </TodoUpsertLabel>
+        <TodoUpsertLabel>
+          Quand
+          <Input type="date" required />
+        </TodoUpsertLabel>
 
-        
-        </TodoForm>
-      </Container>
-    </>
+      
+      </TodoForm>
+    </Container>
   )
 }
