@@ -1,8 +1,9 @@
 import { TodoUpsert } from 'components/TodoUpsert';
 import React from 'react';
 import styled from "styled-components";
-// import { TodoList } from 'components/TodoList';
-// import { TodoDetails } from 'components/TodoDetails';
+import { Routes, Route } from "react-router-dom";
+import { TodoList } from 'components/TodoList';
+import { TodoDetails } from 'components/TodoDetails';
 
 const AppWrapper = styled.main`
   display: flex;
@@ -15,10 +16,11 @@ const AppWrapper = styled.main`
 function App() {
   return (
     <AppWrapper>
-      {/* <TodoList /> */}
-      {/* <TodoDetails /> */}
-      {/* <TodoDetails data={{ id: 1, name: "test", description: "test2"}} /> */}
-      <TodoUpsert />
+      <Routes>
+        <Route path="/" element={<TodoList />} />
+        <Route path="/details/:id" element={<TodoDetails />} />
+        <Route path="/details/edit/:id" element={<TodoUpsert />} />
+      </Routes>
     </AppWrapper>
   );
 }

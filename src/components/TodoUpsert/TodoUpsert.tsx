@@ -2,7 +2,8 @@ import { Container } from "components/Container";
 import { Input, TodoUpsertLabel, TodoForm } from "./TodoUpsert.styles";
 
 /**
- * On submit console.log("submitted", { name, description, date }) and show any errors for now (red text under field + red border if field is in error)
+ * 1. add code that will get the id from url
+ * 2. console log the details associated with that id.
  */
 export const TodoUpsert = (): JSX.Element => {
   return (
