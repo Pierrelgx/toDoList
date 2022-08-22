@@ -1,7 +1,7 @@
 import { Todo } from "components/Todo";
 import { useMemo } from "react";
-import { TodoListWrapper } from "./Todolist.styles";
 import type { Item } from "components/Todo"
+import { Container } from "components/Container";
 
 
 export const TodoList = (): JSX.Element => {
@@ -32,15 +32,10 @@ export const TodoList = (): JSX.Element => {
   ], []);
 
   return (
-    <TodoListWrapper>
+    <Container>
       {todoItems.map((item) => (
         <Todo key={item.id} item={item} />
       ))}
-    </TodoListWrapper>
+    </Container>
   )
-
-
-  
-
-
 };

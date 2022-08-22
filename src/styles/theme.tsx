@@ -7,6 +7,7 @@ const colors = {
   eerieBlack: "#16181D",
   royalBlue: "#3466e4",
   spanishGray: "#949494",
+  spanishGray20: "rgba(148,148,148,0.2)",
 };
 
 const fontWeights = {

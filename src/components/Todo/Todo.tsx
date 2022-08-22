@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { ArrowRight, TodoWrapper, TodoInnerWrapper, TodoTitleWrapper, TodoTitle, TodoDescription  } from "./Todo.styles";
 
+
 export interface Item {
   id: number;
   name: string;
@@ -11,9 +12,7 @@ interface TodoProps {
   item: Item
 }
 
-export const Todo = ({
-  item
-}: TodoProps): JSX.Element => {
+export const Todo = ({item }: TodoProps): JSX.Element => {
 
   const { name, description } = item;
 
