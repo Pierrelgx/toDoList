@@ -10,12 +10,6 @@ export const TodoDetailsRow = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.spanishGray};
 `;
 
-export const TodoTitleDetails = styled.h3`
-  color: ${(props) => props.theme.colors.cultured};
-  font-weight: ${(props) => props.theme.fontWeights.bold};
-  font-size: ${(props) => props.theme.fontSizes.size16};
-`;
-
 export const TodoTask = styled.p`
   color: white;
   font-size: ${(props) => props.theme.fontSizes.size14};
