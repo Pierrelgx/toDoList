@@ -4,6 +4,8 @@ import { TodoDetailsRow, TodoDescription, TodoTask, TodoTitle } from "components
 import { Container } from "components/Container";
 import mockData from "mock/mockData.json";
 import { useParams } from "react-router-dom";
+// import { useEdiiit} from "react-router-dom"
+import { NavBar } from "components/NavBar";
 
 
 
@@ -18,11 +20,16 @@ export const TodoDetails = (): JSX.Element => {
   if (!details) {
     return <p>404 - This one doesn't exist</p>
   }
+
     
   return (
     <>
       {/* Here we put the details page with the todo details */}
+    <NavBar />
+
       <Container>
+
+        
         <TodoTitle>{details.name}</TodoTitle>
         
         <TodoDetailsRow>
@@ -34,7 +41,12 @@ export const TodoDetails = (): JSX.Element => {
           <TodoTask>Description</TodoTask>
           <TodoDescription>{details.description}</TodoDescription>
         </TodoDetailsRow>
+
       </Container>
+
+      {/* <Button onClick={() => {ediiit.push("./edit")}}>Editer</Button> */}
+      
+
     </>
   )
 }

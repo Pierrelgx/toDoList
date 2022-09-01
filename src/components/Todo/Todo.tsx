@@ -15,6 +15,7 @@ export const Todo = ({item }: TodoProps): JSX.Element => {
   const { name, description, id } = item;
 
   return (
+  <>
     <TodoWrapper to={`details/${id}`}>
       <TodoInnerWrapper>
         <input type="checkbox" id="scales" name="scales" />
@@ -25,5 +26,7 @@ export const Todo = ({item }: TodoProps): JSX.Element => {
       </TodoInnerWrapper>
       <ArrowRight />
     </TodoWrapper>
+
+  </>
   )
 };

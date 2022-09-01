@@ -34,3 +34,17 @@ export const TodoDescription = styled.p`
   font-weight: ${(props) => props.theme.fontWeights.regular};
   font-size: ${(props) => props.theme.fontSizes.size14};
 `;
+
+export const Button = styled.button`
+  background-color: white;
+  margin-bottom: 15%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding: 6px;
+  border-radius: 6px;
+  
+  
+  
+
+`;
