@@ -4,6 +4,7 @@ import type { Item } from "components/Todo"
 import { Container } from "components/Container";
 import mockData from "mock/mockData.json";
 import { NavBar } from 'components/NavBar';
+import { Footer } from 'components/Footer';
 
 
 export const TodoList = (): JSX.Element => {
@@ -14,14 +15,16 @@ export const TodoList = (): JSX.Element => {
   return (
     
     <>
-    <NavBar /> 
+    
+    
       <Container>
        
       
-        
+      <NavBar /> 
         {todoItems.map((item) => (
           <Todo key={item.id} item={item} />
         ))}
+        <Footer />
       </Container>
 
     </>
